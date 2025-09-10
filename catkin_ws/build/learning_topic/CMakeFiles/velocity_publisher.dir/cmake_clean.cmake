@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/suibian9106/catkin_ws/devel/lib/learning_topic/velocity_publisher"
-  "/home/suibian9106/catkin_ws/devel/lib/learning_topic/velocity_publisher.pdb"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_topic/velocity_publisher"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_topic/velocity_publisher.pdb"
   "CMakeFiles/velocity_publisher.dir/src/velocity_publisher.cpp.o"
 )
 

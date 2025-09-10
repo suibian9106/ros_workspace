@@ -1,4 +1,4 @@
-prefix=/home/suibian9106/catkin_ws/install
+prefix=/home/suibian9106/mycodes/ros_workspace/catkin_ws/install
 
 Name: learning_parameter
 Description: Description of learning_parameter

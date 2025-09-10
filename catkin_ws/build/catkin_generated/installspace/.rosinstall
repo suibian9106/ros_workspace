@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/suibian9106/catkin_ws/install/setup.sh
+    local-name: /home/suibian9106/mycodes/ros_workspace/catkin_ws/install/setup.sh

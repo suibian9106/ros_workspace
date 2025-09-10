@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/suibian9106/catkin_ws/devel/lib/learning_topic/pose_subscriber"
-  "/home/suibian9106/catkin_ws/devel/lib/learning_topic/pose_subscriber.pdb"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_topic/pose_subscriber"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_topic/pose_subscriber.pdb"
   "CMakeFiles/pose_subscriber.dir/src/pose_subscriber.cpp.o"
 )
 

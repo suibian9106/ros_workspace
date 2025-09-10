@@ -1,8 +1,8 @@
-# Install script for directory: /home/suibian9106/catkin_ws/src/learning_parameter
+# Install script for directory: /home/suibian9106/mycodes/ros_workspace/catkin_ws/src/learning_parameter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/suibian9106/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suibian9106/mycodes/ros_workspace/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suibian9106/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameter.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameter.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_parameter/cmake" TYPE FILE FILES
-    "/home/suibian9106/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameterConfig.cmake"
-    "/home/suibian9106/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameterConfig-version.cmake"
+    "/home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameterConfig.cmake"
+    "/home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter/catkin_generated/installspace/learning_parameterConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_parameter" TYPE FILE FILES "/home/suibian9106/catkin_ws/src/learning_parameter/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_parameter" TYPE FILE FILES "/home/suibian9106/mycodes/ros_workspace/catkin_ws/src/learning_parameter/package.xml")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/suibian9106/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/suibian9106/mycodes/ros_workspace/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/suibian9106/catkin_ws/build
+CMAKE_BINARY_DIR = /home/suibian9106/mycodes/ros_workspace/catkin_ws/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -63,10 +63,10 @@ learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/build: roscpp_gene
 .PHONY : learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/suibian9106/catkin_ws/build/learning_parameter && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/suibian9106/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suibian9106/catkin_ws/src /home/suibian9106/catkin_ws/src/learning_parameter /home/suibian9106/catkin_ws/build /home/suibian9106/catkin_ws/build/learning_parameter /home/suibian9106/catkin_ws/build/learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suibian9106/mycodes/ros_workspace/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suibian9106/mycodes/ros_workspace/catkin_ws/src /home/suibian9106/mycodes/ros_workspace/catkin_ws/src/learning_parameter /home/suibian9106/mycodes/ros_workspace/catkin_ws/build /home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter /home/suibian9106/mycodes/ros_workspace/catkin_ws/build/learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : learning_parameter/CMakeFiles/roscpp_generate_messages_py.dir/depend
 

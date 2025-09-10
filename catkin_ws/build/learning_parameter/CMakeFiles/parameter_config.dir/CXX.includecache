@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/suibian9106/catkin_ws/src/learning_parameter/src/parameter_config.cpp
+/home/suibian9106/mycodes/ros_workspace/catkin_ws/src/learning_parameter/src/parameter_config.cpp
 string
 -
 ros/ros.h

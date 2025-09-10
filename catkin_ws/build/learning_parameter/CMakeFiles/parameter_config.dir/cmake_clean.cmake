@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/suibian9106/catkin_ws/devel/lib/learning_parameter/parameter_config"
-  "/home/suibian9106/catkin_ws/devel/lib/learning_parameter/parameter_config.pdb"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_parameter/parameter_config"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_parameter/parameter_config.pdb"
   "CMakeFiles/parameter_config.dir/src/parameter_config.cpp.o"
 )
 

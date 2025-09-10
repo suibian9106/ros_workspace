@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/suibian9106/catkin_ws/devel/lib/learning_service/turtle_spawn"
-  "/home/suibian9106/catkin_ws/devel/lib/learning_service/turtle_spawn.pdb"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_service/turtle_spawn"
+  "/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel/lib/learning_service/turtle_spawn.pdb"
   "CMakeFiles/turtle_spawn.dir/src/turtle_spawn.cpp.o"
 )
 
