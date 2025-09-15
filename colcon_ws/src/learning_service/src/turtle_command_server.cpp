@@ -1,56 +1,67 @@
-#include<ros/ros.h>
-#include<geometry_msgs/Twist.h>
-#include<std_srvs/Trigger.h>
+#include "geometry_msgs/msg/twist.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include "std_srvs/srv/trigger.hpp"
 
-ros::Publisher turtle_vel_pub;
+using namespace std::chrono_literals;
+
+// 全局变量，用于存储发布状态
 bool pubCommand = false;
 
-// service回调函数，输入参数req，输出参数res
-bool commandCallback(std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res) {
-    pubCommand = !pubCommand;
+// 服务回调函数
+bool commandCallback(
+    const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+    std::shared_ptr<std_srvs::srv::Trigger::Response> response) {
 
-    // 显示请求数据
-    ROS_INFO("Publish turtle velocity command [%s]", pubCommand==true?"Yes":"No");
+  pubCommand = !pubCommand; // 切换发布状态
 
-    // 设置反馈数据
-    res.success = true;
-    res.message = "Change turtle command state!";
+  // 显示请求数据
+  RCLCPP_INFO(rclcpp::get_logger("turtle_command_server"),
+              "Publish turtle velocity command [%s]",
+              pubCommand ? "Yes" : "No");
 
-    return true;
+  // 设置反馈数据
+  response->success = true;
+  response->message = "Change turtle command state!";
+
+  return true;
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
+  // 初始化ROS2节点
+  rclcpp::init(argc, argv);
 
-    //ROS节点初始化
-    ros::init(argc, argv, "turtle_command_server");
+  // 创建节点
+  auto node = rclcpp::Node::make_shared("turtle_command_server");
 
-    // 创建节点句柄
-    ros::NodeHandle n;
+  // 创建服务
+  auto service = node->create_service<std_srvs::srv::Trigger>("/turtle_command",
+                                                              commandCallback);
 
-    // 创建名为/turtle_command的server，注册回调函数commandCallback
-    ros::ServiceServer command_service = n.advertiseService("/turtle_command", commandCallback);
+  // 创建发布器
+  auto publisher =
+      node->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
 
-    // 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist,队列长度10
-    turtle_vel_pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel", 10);
+  // 循环等待回调函数
+  RCLCPP_INFO(node->get_logger(), "Ready to receive turtle command.");
 
-    // 循环等待回调函数
-    ROS_INFO("Ready to receive turtle command.");
+  // 设置循环频率
+  rclcpp::Rate loop_rate(10);
 
-    // 设置循环频率
-    ros::Rate loop_rate(10);
+  while (rclcpp::ok()) {
+    // 查看一次回调函数队列
+    rclcpp::spin_some(node);
 
-    while (ros::ok()) {
-        // 查看一次回调函数队列
-        ros::spinOnce();
-        
-        // 如果标志为true，则发布速度命令
-        if (pubCommand) {
-            geometry_msgs::Twist vel_msg;
-            vel_msg.linear.x = 0.5;
-            vel_msg.angular.z = 0.2;
-            turtle_vel_pub.publish(vel_msg);
-        }
-
-        loop_rate.sleep();
+    // 如果标志为true，则发布速度命令
+    if (pubCommand) {
+      auto msg = geometry_msgs::msg::Twist();
+      msg.linear.x = 0.5;
+      msg.angular.z = 0.2;
+      publisher->publish(msg);
     }
+
+    loop_rate.sleep();
+  }
+
+  rclcpp::shutdown();
+  return 0;
 }

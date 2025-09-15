@@ -1,32 +1,50 @@
-#include<ros/ros.h>
-#include<turtlesim/Spawn.h>
+#include "rclcpp/rclcpp.hpp"
+#include "turtlesim/srv/spawn.hpp"
 
-int main(int argc, char** argv) {
+using namespace std::chrono_literals;
 
-    //初始化节点
-    ros::init(argc, argv, "turtle_spawn");
+int main(int argc, char **argv) {
+  // 初始化ROS2节点
+  rclcpp::init(argc, argv);
 
-    // 创建节点句柄
-    ros::NodeHandle node;
+  // 创建节点
+  auto node = std::make_shared<rclcpp::Node>("turtle_spawn");
 
-    // 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service
-    ros::service::waitForService("/spawn");
-    ros::ServiceClient add_turtle = node.serviceClient<turtlesim::Spawn>("/spawn");
+  // 创建服务客户端
+  auto client = node->create_client<turtlesim::srv::Spawn>("/spawn");
 
-    // 初始化turtlesim::Spawn的请求数据
-    turtlesim::Spawn srv;
-    srv.request.x = 2.0;
-    srv.request.y = 2.0;
-    srv.request.name = "turtle2";
+  // 等待服务可用
+  while (!client->wait_for_service(1s)) {
+    if (!rclcpp::ok()) {
+      RCLCPP_ERROR(node->get_logger(),
+                   "Interrupted while waiting for service.");
+      return 1;
+    }
+    RCLCPP_INFO(node->get_logger(), "Service not available, waiting again...");
+  }
 
-    // 请求服务调用
-    ROS_INFO("Call service to spawn turtule[x:%0.6f, y:%0.6f, name:%s]",
-                srv.request.x, srv.request.y, srv.request.name.c_str());
-    
-    add_turtle.call(srv);
+  // 设置请求数据
+  auto request = std::make_shared<turtlesim::srv::Spawn::Request>();
+  request->x = 2.0;
+  request->y = 2.0;
+  request->name = "turtle2";
 
-    // 显示服务调用结果
-    ROS_INFO("Spawn turtle successfully [name:%s]", srv.response.name.c_str());
+  // 发送请求并等待响应
+  RCLCPP_INFO(node->get_logger(),
+              "Call service to spawn turtle[x: %.2f, y: %.2f, name: %s]",
+              request->x, request->y, request->name.c_str());
 
-    return 0;
+  auto result = client->async_send_request(request);
+
+  // 等待响应结果
+  if (rclcpp::spin_until_future_complete(node, result) ==
+      rclcpp::FutureReturnCode::SUCCESS) {
+    RCLCPP_INFO(node->get_logger(), "Spawn turtle successfully [name: %s]",
+                result.get()->name.c_str());
+  } else {
+    RCLCPP_ERROR(node->get_logger(), "Failed to call service /spawn");
+  }
+
+  rclcpp::shutdown();
+  return 0;
 }
