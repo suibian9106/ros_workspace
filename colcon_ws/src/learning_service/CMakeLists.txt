@@ -21,6 +21,25 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# 添加依赖
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(turtlesim REQUIRED)
+find_package(std_srvs REQUIRED)
+
+# 添加可执行文件
+add_executable(turtle_command_server src/turtle_command_server.cpp)
+ament_target_dependencies(turtle_command_server rclcpp geometry_msgs std_srvs)
+
+add_executable(turtle_spawn src/turtle_spawn.cpp)
+ament_target_dependencies(turtle_spawn rclcpp turtlesim)
+
+# 添加 install 部分，以便 ros2 run 可以找到你的可执行文件
+install(TARGETS
+  turtle_command_server
+  turtle_spawn
+  DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

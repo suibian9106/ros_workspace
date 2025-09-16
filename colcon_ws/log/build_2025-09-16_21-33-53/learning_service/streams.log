@@ -1,0 +1,90 @@
+[0.028s] Invoking command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service -DCMAKE_INSTALL_PREFIX=/home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service
+[0.318s] -- The C compiler identification is GNU 9.4.0
+[0.483s] -- The CXX compiler identification is GNU 9.4.0
+[0.492s] -- Check for working C compiler: /usr/bin/cc
+[0.566s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.569s] -- Detecting C compiler ABI info
+[0.635s] -- Detecting C compiler ABI info - done
+[0.639s] -- Detecting C compile features
+[0.640s] -- Detecting C compile features - done
+[0.643s] -- Check for working CXX compiler: /usr/bin/c++
+[0.725s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.725s] -- Detecting CXX compiler ABI info
+[0.802s] -- Detecting CXX compiler ABI info - done
+[0.809s] -- Detecting CXX compile features
+[0.810s] -- Detecting CXX compile features - done
+[0.815s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.837s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.838s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.013s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.082s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_connext_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.091s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.100s] -- Found RTI Connext: /opt/rti.com/rti_connext_dds-5.3.1
+[2.039s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.063s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.126s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_connext_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.184s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.187s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.190s] -- Looking for pthread.h
+[2.276s] -- Looking for pthread.h - found
+[2.276s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.341s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.343s] -- Looking for pthread_create in pthreads
+[2.392s] -- Looking for pthread_create in pthreads - not found
+[2.393s] -- Looking for pthread_create in pthread
+[2.454s] -- Looking for pthread_create in pthread - found
+[2.455s] -- Found Threads: TRUE  
+[2.617s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.645s] -- Found turtlesim: 1.2.6 (/opt/ros/foxy/share/turtlesim/cmake)
+[2.729s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[2.744s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.817s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.819s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.820s] -- Configured cppcheck include dirs: 
+[2.820s] -- Configured cppcheck exclude dirs and/or files: 
+[2.822s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.822s] -- Configured cpplint exclude dirs and/or files: 
+[2.824s] -- Added test 'lint_cmake' to check CMake code style
+[2.825s] -- Added test 'uncrustify' to check C / C++ code style
+[2.826s] -- Configured uncrustify additional arguments: 
+[2.827s] -- Added test 'xmllint' to check XML markup files
+[2.834s] -- Configuring done
+[2.852s] -- Generating done
+[2.860s] -- Build files have been written to: /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service
+[2.867s] Invoked command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service -DCMAKE_INSTALL_PREFIX=/home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service
+[2.869s] Invoking command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service -- -j2 -l2
+[2.905s] [35m[1mScanning dependencies of target turtle_command_server[0m
+[2.906s] [35m[1mScanning dependencies of target turtle_spawn[0m
+[2.962s] [ 25%] [32mBuilding CXX object CMakeFiles/turtle_command_server.dir/src/turtle_command_server.cpp.o[0m
+[2.978s] [ 50%] [32mBuilding CXX object CMakeFiles/turtle_spawn.dir/src/turtle_spawn.cpp.o[0m
+[3.736s] [01m[K/home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service/src/turtle_command_server.cpp:[m[K In function ‘[01m[Kbool commandCallback(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[3.736s] [01m[K/home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service/src/turtle_command_server.cpp:12:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.736s]    12 |     [01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+[3.737s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[4.394s] [ 75%] [32m[1mLinking CXX executable turtle_spawn[0m
+[4.598s] [ 75%] Built target turtle_spawn
+[4.962s] [100%] [32m[1mLinking CXX executable turtle_command_server[0m
+[5.100s] [100%] Built target turtle_command_server
+[5.113s] Invoked command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service -- -j2 -l2
+[5.114s] Invoking command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service
+[5.123s] -- Install configuration: ""
+[5.124s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/lib/learning_service/turtle_command_server
+[5.129s] -- Set runtime path of "/home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/lib/learning_service/turtle_command_server" to ""
+[5.129s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/lib/learning_service/turtle_spawn
+[5.130s] -- Set runtime path of "/home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/lib/learning_service/turtle_spawn" to ""
+[5.131s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/ament_index/resource_index/package_run_dependencies/learning_service
+[5.131s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/ament_index/resource_index/parent_prefix_path/learning_service
+[5.132s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/environment/ament_prefix_path.sh
+[5.132s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/environment/ament_prefix_path.dsv
+[5.132s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/environment/path.sh
+[5.133s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/environment/path.dsv
+[5.133s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/local_setup.bash
+[5.133s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/local_setup.sh
+[5.134s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/local_setup.zsh
+[5.134s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/local_setup.dsv
+[5.134s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/package.dsv
+[5.135s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/ament_index/resource_index/packages/learning_service
+[5.135s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/cmake/learning_serviceConfig.cmake
+[5.135s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/cmake/learning_serviceConfig-version.cmake
+[5.136s] -- Installing: /home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_service/share/learning_service/package.xml
+[5.138s] Invoked command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service

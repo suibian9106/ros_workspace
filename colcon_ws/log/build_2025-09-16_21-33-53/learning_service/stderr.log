@@ -1,0 +1,4 @@
+[01m[K/home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service/src/turtle_command_server.cpp:[m[K In function ‘[01m[Kbool commandCallback(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/suibian9106/mycodes/ros_workspace/colcon_ws/src/learning_service/src/turtle_command_server.cpp:12:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 |     [01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
