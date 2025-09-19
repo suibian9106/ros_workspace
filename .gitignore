@@ -1,0 +1,6 @@
+catkin_ws/build/
+catkin_ws/devel/
+
+colcon_ws/install/
+colcon_ws/log/
+colcon_ws/build/
