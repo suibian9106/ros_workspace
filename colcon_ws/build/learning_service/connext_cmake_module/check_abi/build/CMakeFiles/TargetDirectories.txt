@@ -1,3 +1,0 @@
-/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service/connext_cmake_module/check_abi/build/CMakeFiles/rebuild_cache.dir
-/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service/connext_cmake_module/check_abi/build/CMakeFiles/edit_cache.dir
-/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_service/connext_cmake_module/check_abi/build/CMakeFiles/exe.dir
