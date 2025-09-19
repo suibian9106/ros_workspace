@@ -1,2 +1,0 @@
-learning_parameter:learning_service:learning_topic
--DCATKIN_DEVEL_PREFIX=/home/suibian9106/mycodes/ros_workspace/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/suibian9106/mycodes/ros_workspace/catkin_ws/install -G Unix Makefiles
