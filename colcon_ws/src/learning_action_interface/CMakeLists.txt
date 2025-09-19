@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(learning_parameter)
+project(learning_action_interface)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -21,22 +21,12 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-# 添加依赖
-find_package(rclcpp REQUIRED)
-find_package(std_srvs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
-# 添加可执行文件
-add_executable(parameter_config src/parameter_config.cpp)
-ament_target_dependencies(parameter_config rclcpp std_srvs)
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "action/Fibonacci.action"
+)
 
-add_executable(single_node src/single_node.cpp)
-ament_target_dependencies(single_node rclcpp)
-
-# 添加 install 部分，以便 ros2 run 可以找到你的可执行文件
-install(TARGETS
-  parameter_config
-  single_node
-  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

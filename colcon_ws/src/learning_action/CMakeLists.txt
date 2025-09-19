@@ -21,6 +21,24 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# 添加依赖
+find_package(rclcpp REQUIRED)
+find_package(learning_action_interface REQUIRED)
+find_package(rclcpp_action REQUIRED)
+
+# 添加可执行文件
+add_executable(fibonacci_action_server src/fibonacci_action_server.cpp)
+ament_target_dependencies(fibonacci_action_server rclcpp learning_action_interface rclcpp_action)
+
+add_executable(fibonacci_action_client src/fibonacci_action_client.cpp)
+ament_target_dependencies(fibonacci_action_client rclcpp learning_action_interface rclcpp_action)
+
+# 添加 install 部分，以便 ros2 run 可以找到你的可执行文件
+install(TARGETS
+  fibonacci_action_server
+  fibonacci_action_client
+  DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

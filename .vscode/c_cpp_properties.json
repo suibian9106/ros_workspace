@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/ros/noetic/include/**",
-                "/opt/ros/foxy/include/**"
+                "/opt/ros/foxy/include/**",
+                "/home/suibian9106/mycodes/ros_workspace/colcon_ws/install/learning_action_interface/include/**"
             ],
             "defines": [],
             "cStandard": "c17",
