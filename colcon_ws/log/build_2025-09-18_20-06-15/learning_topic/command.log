@@ -1,4 +1,0 @@
-Invoking command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic -- -j2 -l2
-Invoked command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic -- -j2 -l2
-Invoking command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic
-Invoked command in '/home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/suibian9106/mycodes/ros_workspace/colcon_ws/build/learning_topic
